@@ -373,6 +373,7 @@ func (cli *Client) UnfollowNewsletter(jid types.JID) error {
 type GetNewsletterMessagesParams struct {
 	Count  int
 	Before types.MessageServerID
+	After  types.MessageServerID
 }
 
 // GetNewsletterMessages gets messages in a WhatsApp channel.
@@ -387,6 +388,9 @@ func (cli *Client) GetNewsletterMessages(jid types.JID, params *GetNewsletterMes
 		}
 		if params.Before != 0 {
 			attrs["before"] = params.Before
+		}
+		if params.After != 0 {
+			attrs["after"] = params.After
 		}
 	}
 	resp, err := cli.sendIQ(infoQuery{
