@@ -66,6 +66,8 @@ const (
 	IndexCustomerData                    = "customer_data"
 	IndexThreadPin                       = "thread_pin"
 	IndexSettingAutoOrganizeBusinessChat = "setting_autoOrganizeBusinessChat"
+	IndexCoexV2Version                   = "coexV2Version"
+	IndexLockMessage                     = "lock_message"
 )
 
 // Constants for the regular app state indexes.
@@ -121,7 +123,8 @@ const (
 	IndexPrivateProcessingSetting                     = "private_processing_setting"
 	IndexAIThreadDelete                               = "ai_thread_delete"
 	IndexNCTSaltSync                                  = "nct_salt_sync"
-	IndexBizAISettingsNudgeAction                     = "biz_ai_settings_nudge_action"
+	IndexBizAISettingsNudgeAction                     = "biz_ai_settings_nudge"
+	IndexWasaRootSecretAction                         = "wasa_root_secret"
 )
 
 // Constants for the critical_unblock_low app state indexes.
